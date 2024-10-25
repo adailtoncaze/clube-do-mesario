@@ -199,6 +199,34 @@ const HeroSection = () => {
 
             </div>
           </SwiperSlide>
+          {/* Slide 7 */}
+          <SwiperSlide className="relative flex items-center justify-center"> {/* Ajuste principal aqui */}
+            <div className="container grid grid-cols-1 md:grid-cols-2 items-center text-white p-8 min-h-[60vh]">
+              {/* Coluna da Esquerda */}
+              <div className="flex flex-col items-start space-y-4 justify-center">
+                <div className="flex justify-center items-center border-2 rounded-lg overflow-hidden w-[115px] h-[115px] bg-no-repeat bg-center bg-cover"
+                  style={{ backgroundImage: "url('/images/logo-raquel-estetica.png')" }}
+                >
+                </div>
+                <div className="flex flex-col justify-center">
+                <h1 className="text-4xl font-bold mb-1">RAQUEL MOURA</h1> {/* Margem inferior do h1 ajustada */}                  
+                <p className="text-xl mb-0 font-extralight">ESTÉTICA CORPORAL E DERMOPIGMENTAÇÃO</p> {/* Margem superior do p removida */}
+                </div>
+                <p className="text-2xl font-semibold">10% OFF para pagamentos à vista ou via PIX</p> {/* Margem superior do p removida */}
+                <div className="flex justify-center md:justify-end md:flex-shrink-0">
+                  <a href="#ofertas" className="bg-primary text-white border border-white text-sm px-6 py-3 rounded-full hover:bg-white hover:text-primary">Ver ofertas</a>
+                </div>
+
+              </div>
+
+              {/* Coluna da Direita */}
+              <div className="flex justify-center items-center border-2 rounded-lg overflow-hidden w-[580px] h-[300px] bg-no-repeat bg-center bg-cover"
+                style={{ backgroundImage: "url('/images/banner_raquel-estetica.png')" }}
+              >
+              </div>
+
+            </div>
+          </SwiperSlide>
 
         </Swiper>
       </div>
