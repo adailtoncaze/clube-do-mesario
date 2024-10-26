@@ -6,8 +6,8 @@ const HighlightSection = () => {
         <p className="font-normal text-xl text-secondary-dark w-full md:w-2/3 mb-8">
           No <span className="text-primary">Clube do Mesário</span>, as vantagens vão muito além do reconhecimento social.
           Empresas e instituições parceiras oferecem uma variedade de <span className="text-primary">benefícios exclusivos</span> para quem atuou como mesário ou colaborador nas eleições.
-          Confira os principais destaques:
         </p>
+        <p className="text-2xl text-secondary-dark pb-8">Confira os principais destaques:</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full md:w-2/3">
           <div className="bg-white p-6 rounded shadow hover:shadow-lg transition">
             <img src="/restaurante.jpg" alt="Restaurante" className="mb-4 rounded" />
