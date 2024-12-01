@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export default function Benefits() {
   const otherBenefits = [
     'Dispensa do serviço pelo dobro dos dias de convocação e da seleção eleitoral',
