@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,5 +19,81 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Swiper custom styles */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom pagination */
+.swiper-custom-pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.swiper-custom-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: white;
+  opacity: 0.5;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin: 0;
+}
+
+.swiper-custom-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: white;
+  transform: scale(1.2);
+}
+
+/* Custom navigation buttons */
+.swiper-custom-button-prev,
+.swiper-custom-button-next {
+  transition: all 0.3s;
+}
+
+.swiper-custom-button-prev:hover,
+.swiper-custom-button-next:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .swiper-custom-button-prev,
+  .swiper-custom-button-next {
+    display: none;
+  }
+}
+
+/* Background wave effect */
+.bg-wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  background: linear-gradient(45deg, #2FA877 25%, transparent 25%) 50px 0,
+              linear-gradient(-45deg, #2FA877 25%, transparent 25%) 50px 0;
+  background-size: 100px 100px;
+  opacity: 0.1;
+}
+
+/* Fade effect customization */
+.swiper-fade .swiper-slide {
+  pointer-events: none;
+  transition-property: opacity;
+  transition-duration: 1000ms;
+}
+
+.swiper-fade .swiper-slide-active {
+  pointer-events: auto;
 }
