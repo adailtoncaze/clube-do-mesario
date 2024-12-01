@@ -97,3 +97,9 @@ body {
 .swiper-fade .swiper-slide-active {
   pointer-events: auto;
 }
+
+@layer components {
+  .container-padding {
+    @apply px-6 sm:px-8 lg:px-12;
+  }
+}

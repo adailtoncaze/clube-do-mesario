@@ -39,9 +39,9 @@ const slides = [
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-[600px] bg-[url('/images/banner-hero.svg')] bg-cover bg-no-repeat bg-center">
+    <section className="relative w-full h-[600px] md:h-[650px] bg-[url('/images/banner-hero.svg')] bg-cover bg-no-repeat bg-center">
       <div className="relative h-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 h-full flex items-center">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 h-full flex items-center">
           <Swiper
             modules={[Autoplay, Navigation, EffectFade, Pagination]}
             autoplay={{
@@ -67,49 +67,51 @@ export default function Hero() {
             className="h-full w-full"
           >
             {slides.map((slide) => (
-              <SwiperSlide key={slide.id} className="h-full flex items-center">
-                <div className="grid grid-cols-1 md:grid-cols-2 items-center text-white gap-8 h-full">
-                  {/* Coluna da Esquerda */}
-                  <div className="flex flex-col items-start space-y-4 justify-center max-w-xl">
-                    <div className="flex justify-center items-center border-2 rounded-lg overflow-hidden w-[115px] h-[115px] bg-no-repeat bg-center bg-cover">
-                      <div className="relative w-full h-full">
-                        <Image
-                          src={slide.logo}
-                          alt={slide.title}
-                          fill
-                          className="object-contain"
-                        />
+              <SwiperSlide key={slide.id} className="py-8 md:py-4 px-1 h-[500px] md:h-[550px]">
+                <div className="rounded-xl group h-full w-full flex flex-col">
+                  <div className="grid grid-cols-1 md:grid-cols-2 items-center text-white gap-8 h-full">
+                    {/* Coluna da Esquerda */}
+                    <div className="flex flex-col items-start space-y-4 justify-center max-w-xl px-4 md:px-0">
+                      <div className="flex justify-center items-center border-2 rounded-lg overflow-hidden w-[115px] h-[115px] bg-no-repeat bg-center bg-cover">
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={slide.logo}
+                            alt={slide.title}
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
                       </div>
+                      <div className="flex flex-col justify-center">
+                        <p className="text-xl font-extralight">{slide.type}</p>
+                        <h1 className="text-4xl font-bold">{slide.title}</h1>
+                      </div>
+                      <div className="space-y-1">
+                        {slide.discounts.map((discount, index) => (
+                          <p key={index} className="text-2xl font-semibold">{discount}</p>
+                        ))}
+                      </div>
+                      <a
+                        href="#ofertas"
+                        className="mt-4 inline-flex items-center justify-center px-8 py-3 border border-white rounded-full text-sm font-medium text-white hover:bg-white hover:text-primary transition-colors"
+                      >
+                        Ver ofertas
+                      </a>
                     </div>
-                    <div className="flex flex-col justify-center">
-                      <p className="text-xl font-extralight">{slide.type}</p>
-                      <h1 className="text-4xl font-bold">{slide.title}</h1>
-                    </div>
-                    <div className="space-y-1">
-                      {slide.discounts.map((discount, index) => (
-                        <p key={index} className="text-2xl font-semibold">{discount}</p>
-                      ))}
-                    </div>
-                    <a
-                      href="#ofertas"
-                      className="mt-4 inline-flex items-center justify-center px-8 py-3 border border-white rounded-full text-sm font-medium text-white hover:bg-white hover:text-primary transition-colors"
-                    >
-                      Ver ofertas
-                    </a>
-                  </div>
 
-                  {/* Coluna da Direita */}
-                  <div className="relative h-[300px] md:h-[400px] w-full flex items-center justify-end">
-                    <div className="flex justify-center items-center border-2 rounded-lg overflow-hidden w-[580px] h-[300px] bg-no-repeat bg-center bg-cover">
-                      <div className="relative w-full h-full">
-                        <Image
-                          src={slide.banner}
-                          alt={`${slide.title} Banner`}
-                          fill
-                          sizes="(max-width: 580px) 100vw, 580px"
-                          className="object-cover"
-                          priority
-                        />
+                    {/* Coluna da Direita - Escondida em mobile */}
+                    <div className="hidden md:flex relative h-[300px] md:h-[400px] w-full items-center justify-end">
+                      <div className="flex justify-center items-center border-2 rounded-lg overflow-hidden w-[580px] h-[300px] bg-no-repeat bg-center bg-cover">
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={slide.banner}
+                            alt={`${slide.title} Banner`}
+                            fill
+                            sizes="(max-width: 580px) 100vw, 580px"
+                            className="object-cover"
+                            priority
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>

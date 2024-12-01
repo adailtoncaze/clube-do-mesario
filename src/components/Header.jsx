@@ -84,7 +84,7 @@ export default function Header() {
 
             {/* Main Header */}
             <div className="border-b">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <div className="max-w-7xl mx-auto container-padding py-4">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                         <div className="flex items-center">
                             <Image
